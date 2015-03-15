@@ -1,10 +1,10 @@
 Create a Docker image
 -----
-docker build -t dicaormu/app .
+docker build -t fagossa/httpexample .
 
 
 Run the image
 -----
-docker run -p 8080 dicaormu/app
+docker run -p 8080 fagossa/httpexample
 
 

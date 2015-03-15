@@ -1,1 +1,1 @@
-curl -XPOST -H "Content-Type:application/json" "http://192.168.33.10:8080/v2/apps" -d @/Users/fagossa/Documents/diana/mesos-marathon/marathon-deploy.json
+curl -XPOST -H "Content-Type:application/json" "http://192.168.33.10:8080/v2/apps" -d @/Users/johndoe/Documents/mesos-marathon/marathon-deploy.json

@@ -1,0 +1,1 @@
+sudo /opt/marathon/bin/start --master zk://localhost:2181/mesos --zk_hosts localhost:2181 --event_subscriber http_callback > /var/log/marathon/nohup.log 2> /var/log/marathon/nohup.log < /dev/null &

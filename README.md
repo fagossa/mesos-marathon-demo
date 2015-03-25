@@ -1,6 +1,10 @@
 Mesos-marathon demo
 =======
 
+### Prepare the environnement
+
+Just follow the instructions inside the `vagrant-mesos` directory. Once your vagrant machine is running with mesos and marathon installed you can continue with the following sections.
+
 ### Run the image
 
 In order to deploy a new application in marathon it is just enough to make a Http POST

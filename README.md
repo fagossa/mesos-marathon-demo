@@ -1,11 +1,15 @@
 Mesos-marathon demo
 =======
 
-### Prepare the environnement
+### Preparing the environnement
 
 Just follow the instructions inside the `vagrant-mesos` directory. Once your vagrant machine is running with mesos and marathon installed you can continue with the following sections.
 
-### Run the image
+### Building the image
+
+To be able to execute the example using docker, the directory `docker-image` contains the steps needed to build and create docker instances.
+
+### Running the image
 
 In order to deploy a new application in marathon it is just enough to make a Http POST
 
@@ -17,7 +21,7 @@ The contents of the json file obviously depends on the kind of applcation we wan
 sections contains several examples.
 
 
-Install a tomcat server and deploy a war inside
+Installing a tomcat server and deploy a war inside
 -----
 ```
 curl -i -H "Content-type: application/json" -X POST http://192.168.33.10:8080/v2/apps -d '
@@ -35,7 +39,7 @@ curl -i -H "Content-type: application/json" -X POST http://192.168.33.10:8080/v2
 '
 ```
 
-Install a docker image and start it
+Installint a docker image and start it
 -----
 ```
 curl -i -H "Content-type: application/json" -X POST http://192.168.33.10:8080/v2/apps -d '
@@ -51,7 +55,7 @@ curl -i -H "Content-type: application/json" -X POST http://192.168.33.10:8080/v2
    "type": "DOCKER",
    "volumes": [],
    "docker": {
-     "image": "fagossa/httpexample:latest",
+     "image": "imgname/httpexample:latest",
      "network": "BRIDGE",
      "portMappings": [{ "containerPort": 8080, "servicePort": 9000 , "hostPort": 0, "protocol": "tcp" }]
     }

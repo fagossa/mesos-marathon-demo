@@ -31,8 +31,9 @@ Where,
 
 Then, if we execute a `docker ps` we should be able to see our newly created image on the list!
 
-`CONTAINER ID   IMAGE                       COMMAND              PORTS `    
-`50226338cfe2   imgname/httpexample:latest "/env/bin/python -m   0.0.0.0:49176->9090:8080/tcp`
+| CONTAINER ID |  IMAGE                    |   COMMAND              | PORTS |
+|:------------:|---------------------------|------------------------|-------|
+|50226338cfe2 |  imgname/httpexample:latest | "/env/bin/python -m"  |  0.0.0.0:49176->9090:8080/tcp |
 
 However, in order access it, you need to first verify the address in which docker is running. If you are using *boot2docker*, you could just get it by running `boot2docker ip`.
 

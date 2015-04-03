@@ -13,7 +13,7 @@ To be able to execute the example using docker, the directory `docker-image` con
 
 In order to deploy a new application in marathon it is just enough to make a Http POST
 
-```
+```json
 curl -XPOST -H "Content-Type:application/json" "http://192.168.33.10:8080/v2/apps" -d @/Users/johndoe/Documents/mesos-marathon/app.json
 ```
 
@@ -23,7 +23,7 @@ sections contains several examples.
 
 Installing a tomcat server and deploy a war inside
 -----
-```
+```json
 curl -i -H "Content-type: application/json" -X POST http://192.168.33.10:8080/v2/apps -d '
 {
   "id": "tomcat",
@@ -41,7 +41,7 @@ curl -i -H "Content-type: application/json" -X POST http://192.168.33.10:8080/v2
 
 Installint a docker image and start it
 -----
-```
+```json
 curl -i -H "Content-type: application/json" -X POST http://192.168.33.10:8080/v2/apps -d '
 {
  "id": "exampleapp",
@@ -66,7 +66,7 @@ curl -i -H "Content-type: application/json" -X POST http://192.168.33.10:8080/v2
 
 It is also possible to create additional health checks to the installed applications by adding the following section to the json
 
-```
+```json
 "healthChecks": [
     {
       "protocol": "HTTP",

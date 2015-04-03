@@ -39,7 +39,7 @@ curl -i -H "Content-type: application/json" -X POST http://192.168.33.10:8080/v2
 '
 ```
 
-Installint a docker image and start it
+Installing a docker image and start it
 -----
 ```json
 curl -i -H "Content-type: application/json" -X POST http://192.168.33.10:8080/v2/apps -d '
